@@ -1,0 +1,246 @@
+@font-face {
+    src: url("../vendor/font/Poppins/Poppins-Regular.ttf");
+    font-weight: normal;
+    font-family: Poppins;
+}
+@font-face {
+    src: url("../vendor/font/Poppins/Poppins-SemiBold.ttf");
+    font-weight: 600;
+    font-family: Poppins;
+}
+@font-face {
+    src: url("../vendor/font/Poppins/Poppins-Bold.ttf");
+    font-weight: bold;
+    font-family: Poppins;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*btn */
+.btn-custom{
+    font-size: 14px;
+}
+
+/*nav header*/
+.nav-header{
+    position: absolute;
+    z-index: 3000;
+}
+
+/*home*/
+.home{
+    background-image: url("../img/bg-shape.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50%;
+    position: relative;
+}
+
+.home-svg{
+
+}
+.home-img{
+}
+.mouse-box{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+.mouse{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.icon-info{
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+}
+.line{
+    width: 5px;
+    height: 25px;
+    background: var(--bs-primary);
+    border-radius: 1rem;
+}
+
+
+/*about*/
+.about{
+
+}
+.about-tBox{
+    background: url("../img/bg-2.svg");
+    background-size: cover;
+    padding: 30px;
+}
+
+.about-img{
+    width: 85% !important;
+}
+.about-text{
+    width: 70% !important;
+}
+
+/*services */
+.services{
+    background-image: url("../img/bg-2.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.services-item{
+    /*width: 80%;*/
+}
+.imgCard{
+    width: 28%;
+}
+.card-services{
+    height: 480px;
+}
+
+/*prices */
+.prices{}
+.slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slick-dots li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slick-dots li button{
+    width: 15px;
+    height: 15px;
+    border:2px solid var(--bs-primary) !important;
+    border-radius: 50%;
+}
+.slick-dots .slick-active{
+    width: 20px;
+    height: 20px;
+    background: var(--bs-primary);
+    border-radius: 50%;
+}
+/*footer*/
+.footer{
+    background-image: url("../img/footerOne.svg"), url("../img/footerTwo.svg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+.footer-h{
+    height: 70vh;
+    align-items: end;
+}
+
+
+@media screen and (max-width: 1366px){
+    .home-svg{
+        width: 85% !important;
+    }
+    .icon-info{
+        position: absolute;
+        bottom: 50px;
+        left: 30px;
+    }
+
+}
+
+/*animate delay*/
+.d-one{
+    animation-delay: 0.5s;
+}
+.d-two{
+    animation-delay: 1s;
+}
+.d-three{
+    animation-delay: 1.5s;
+}
+.d-four{
+    animation-delay: 2s;
+}
+.d-five{
+    animation-delay: 2.5s;
+}
+
+@media screen and (max-width: 1030px) {
+    .footer{
+        background: var(--bs-primary);
+    }
+    .footer-h{
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 780px){
+    .home-svg{
+        width: 85% !important;
+    }
+    .icon-info{
+        position: absolute;
+        bottom: 50px;
+        right: -500px;
+    }
+    .home-svg-box{
+        margin-top: 3rem;
+    }
+    .about-tBox{
+        padding: 0;
+    }
+    .about-img{
+        width: 100% !important;
+    }
+    .about-text{
+        width: 100% !important;
+    }
+    .about-item{
+        padding: 0 20px;
+    }
+    .footer{
+        background: var(--bs-primary);
+    }
+    .footer-h{
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 580px){
+    .home-img{
+        height: 100% !important;
+    }
+    .icon-info{
+       display: none;
+    }
+    .home-svg-box{
+        margin-top: 35px;
+    }
+    .about-tBox{
+        padding: 0;
+    }
+    .about-item{
+        padding: 0 14px;
+    }
+    .card{
+        height: 100%;
+    }
+
+}
