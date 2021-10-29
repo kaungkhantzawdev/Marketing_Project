@@ -1,4 +1,8 @@
 <!doctype html>
+<link rel="icon" href="img/logo.svg">
+<div class="loader-container">
+    <div class="loader">Loading...</div>
+</div>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,6 +11,76 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Marketing</title>
     <link rel="icon" href="img/logo.svg">
+    <style>
+        .loader-container{
+            width: 100%;
+            height: 100vh;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            z-index: 5000;
+        }
+        .loader,
+        .loader:before,
+        .loader:after {
+            border-radius: 50%;
+            width: 2.5em;
+            height: 2.5em;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation: load7 1.8s infinite ease-in-out;
+            animation: load7 1.8s infinite ease-in-out;
+        }
+        .loader {
+            color: #5113fb;
+            font-size: 10px;
+            margin: 80px auto;
+            position: relative;
+            text-indent: -9999em;
+            -webkit-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-animation-delay: -0.16s;
+            animation-delay: -0.16s;
+        }
+        .loader:before,
+        .loader:after {
+            content: '';
+            position: absolute;
+            top: 0;
+        }
+        .loader:before {
+            left: -3.5em;
+            -webkit-animation-delay: -0.32s;
+            animation-delay: -0.32s;
+        }
+        .loader:after {
+            left: 3.5em;
+        }
+        @-webkit-keyframes load7 {
+            0%,
+            80%,
+            100% {
+                box-shadow: 0 2.5em 0 -1.3em;
+            }
+            40% {
+                box-shadow: 0 2.5em 0 0;
+            }
+        }
+        @keyframes load7 {
+            0%,
+            80%,
+            100% {
+                box-shadow: 0 2.5em 0 -1.3em;
+            }
+            40% {
+                box-shadow: 0 2.5em 0 0;
+            }
+        }
+
+    </style>
     <link rel="stylesheet" href="css/customBootstrap/customBootstrap.css">
     <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="vendor/slick/slick.css">
@@ -17,7 +91,7 @@
 <body>
 
 <!--header -->
-<section class="container-fluid nav-header animate__animated animate__fadeInDown">
+<header class="container-fluid nav-header animate__animated animate__fadeInDown">
     <div class="row">
        <div class="col-12">
            <nav class="navbar navbar-expand-lg navbar-dark">
@@ -29,24 +103,26 @@
                        </div>
                    </a>
                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                       <span class="navbar-toggler-icon"></span>
+                       <span class="">
+                           <i class="fas fa-bars fs-2 text-primary m"></i>
+                       </span>
                    </button>
                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                        <ul class="navbar-nav mb-2 mb-lg-0">
                            <li class="nav-item">
-                               <a class="nav-link active" aria-current="page" href="#">Home</a>
+                               <a class="nav-link " href="#home">Home</a>
                            </li>
                            <li class="nav-item">
-                               <a class="nav-link" href="#">About</a>
+                               <a class="nav-link" href="#about">About</a>
                            </li>
                            <li class="nav-item">
-                               <a class="nav-link" href="#">Services</a>
+                               <a class="nav-link" href="#services">Services</a>
                            </li>
                            <li class="nav-item">
-                               <a class="nav-link" href="#">Prices</a>
+                               <a class="nav-link" href="#prices">Prices</a>
                            </li>
                            <li class="nav-item">
-                               <a class="nav-link" href="#">Contact</a>
+                               <a class="nav-link" href="#contact">Contact</a>
                            </li>
 
                        </ul>
@@ -55,7 +131,7 @@
            </nav>
        </div>
     </div>
-</section>
+</header>
 
 <!--home-->
 <section class="container-fluid home" id="home">
@@ -249,7 +325,7 @@
                                        <g class="animate__animated animate__fadeIn d-one" id="Group_1352" data-name="Group 1352" transform="translate(149.934 657.909)">
                                            <path id="Path_1271" data-name="Path 1271" d="M342,449.758c124.415,0,225.889-6.974,225.889-15.524S466.414,418.712,342,418.712s-225.889,6.972-225.889,15.522S217.583,449.758,342,449.758Z" transform="translate(-116.109 -418.712)" fill="#bedaf7" fill-rule="evenodd"/>
                                        </g>
-                                       <g class="animate__animated animate__fadeIn d-four" id="Group_1422" data-name="Group 1422" transform="translate(68.562 82.478)">
+                                       <g class="animate__animated animate__zoomInUp d-four" id="Group_1422" data-name="Group 1422" transform="translate(68.562 82.478)">
                                            <g id="Group_1353" data-name="Group 1353" transform="translate(165.286 45.302)">
                                                <path id="Path_1272" data-name="Path 1272" d="M451.334,150.206V613.348a41.249,41.249,0,0,1-41.257,41.258H206.4a41.25,41.25,0,0,1-41.257-41.258V150.206A41.264,41.264,0,0,1,206.4,108.949H410.077A41.263,41.263,0,0,1,451.334,150.206Z" transform="translate(-165.142 -108.949)" fill="#6fa0fd" fill-rule="evenodd"/>
                                            </g>
@@ -454,23 +530,23 @@
                    <div class="col-12">
                        <div class="mouse-box animate__animated animate__fadeIn d-four">
                            <a href="#about" class="mouse bg-white shadow d-flex align-items-center justify-content-center">
-                               <img src="img/mouse.svg" style="width: 38%" alt="">
+                               <img src="img/mouse.svg" style="width: 38%" alt="" class="animate__animated animate__bounce animate__infinite">
                            </a>
                        </div>
                    </div>
                    <div class="col-12 d-none d-lg-block">
                        <div class="icon-info animate__animated animate__fadeInLeft d-four">
                            <div class="d-flex flex-column align-items-center">
-                               <a href="" class="d-inline-block mb-2">
+                               <a href="https://facebook.com" class="d-inline-block mb-2 home-icon">
                                    <i class="fab fa-facebook-f"></i>
                                </a>
-                               <a href="" class="d-inline-block mb-2">
+                               <a href="https://google.com" class="d-inline-block mb-2 home-icon">
                                    <i class="fab fa-google-plus-g"></i>
                                </a>
-                               <a href="" class="d-inline-block mb-2">
+                               <a href="https://twitter.com" class="d-inline-block mb-2 home-icon">
                                    <i class="fab fa-twitter"></i>
                                </a>
-                               <a href="" class="d-inline-block mb-2">
+                               <a href="https://instragram.com" class="d-inline-block mb-2 home-icon">
                                    <i class="fab fa-instagram"></i>
                                </a>
                                <div class="line"></div>
@@ -1150,8 +1226,7 @@
                     </div>
                 </div>
                 <div class="row center wow animate__fadeIn d-one">
-
-                        <div class="col-12 col-md-6 col-xl-4 m-3">
+                    <div class="col-12 col-md-6 col-xl-4 m-3">
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="services-item">
                                     <div class="card border-0 shadow-sm mb-4 p-4">
@@ -1163,13 +1238,13 @@
                                                 comments and everything in between.
                                             </p>
                                             <h4 class="text-primary ps-4 my-5 ">$99</h4>
-                                            <button class="btn btn-primary btn-custom">SEE MORE</button>
+                                            <button class="btn btn-outline-primary btn-custom">SEE MORE</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-xl-4 m-3">
+                    <div class="col-12 col-md-6 col-xl-4 m-3">
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="services-item">
                                     <div class="card border-0 shadow-sm mb-4 p-4">
@@ -1181,13 +1256,13 @@
                                                 comments and everything in between.
                                             </p>
                                             <h4 class="text-primary ps-4 my-5 ">$199</h4>
-                                            <button class="btn btn-primary btn-custom">SEE MORE</button>
+                                            <button class="btn btn-outline-primary btn-custom">SEE MORE</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-xl-4 m-3">
+                    <div class="col-12 col-md-6 col-xl-4 m-3">
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="services-item">
                                     <div class="card border-0 shadow-sm mb-4 p-4">
@@ -1199,13 +1274,13 @@
                                                 comments and everything in between.
                                             </p>
                                             <h4 class="text-primary ps-4 my-5 ">$69</h4>
-                                            <button class="btn btn-primary btn-custom">SEE MORE</button>
+                                            <button class="btn btn-outline-primary btn-custom">SEE MORE</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-xl-4 m-3">
+                    <div class="col-12 col-md-6 col-xl-4 m-3">
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="services-item">
                                     <div class="card border-0 shadow-sm mb-4 p-4">
@@ -1217,13 +1292,13 @@
                                                 comments and everything in between.
                                             </p>
                                             <h4 class="text-primary ps-4 my-5 ">$99</h4>
-                                            <button class="btn btn-primary btn-custom">SEE MORE</button>
+                                            <button class="btn btn-outline-primary btn-custom">SEE MORE</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-xl-4 m-3">
+                    <div class="col-12 col-md-6 col-xl-4 m-3">
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="services-item">
                                     <div class="card border-0 shadow-sm mb-4 p-4">
@@ -1235,13 +1310,13 @@
                                                 comments and everything in between.
                                             </p>
                                             <h4 class="text-primary ps-4 my-5 ">$199</h4>
-                                            <button class="btn btn-primary btn-custom">SEE MORE</button>
+                                            <button class="btn btn-outline-primary btn-custom">SEE MORE</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-xl-4 m-3">
+                    <div class="col-12 col-md-6 col-xl-4 m-3">
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="services-item">
                                     <div class="card border-0 shadow-sm mb-4 p-4">
@@ -1253,13 +1328,13 @@
                                                 comments and everything in between.
                                             </p>
                                             <h4 class="text-primary ps-4 my-5 ">$69</h4>
-                                            <button class="btn btn-primary btn-custom">SEE MORE</button>
+                                            <button class="btn btn-outline-primary btn-custom">SEE MORE</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-xl-4 m-3">
+                    <div class="col-12 col-md-6 col-xl-4 m-3">
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="services-item">
                                     <div class="card border-0 shadow-sm mb-4 p-4">
@@ -1271,13 +1346,13 @@
                                                 comments and everything in between.
                                             </p>
                                             <h4 class="text-primary ps-4 my-5 ">$99</h4>
-                                            <button class="btn btn-primary btn-custom">SEE MORE</button>
+                                            <button class="btn btn-outline-primary btn-custom">SEE MORE</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-xl-4 m-3">
+                    <div class="col-12 col-md-6 col-xl-4 m-3">
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="services-item">
                                     <div class="card border-0 shadow-sm mb-4 p-4">
@@ -1289,13 +1364,13 @@
                                                 comments and everything in between.
                                             </p>
                                             <h4 class="text-primary ps-4 my-5 ">$199</h4>
-                                            <button class="btn btn-primary btn-custom">SEE MORE</button>
+                                            <button class="btn btn-outline-primary btn-custom">SEE MORE</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-xl-4 m-3">
+                    <div class="col-12 col-md-6 col-xl-4 m-3">
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="services-item">
                                     <div class="card border-0 shadow-sm mb-4 p-4">
@@ -1307,14 +1382,12 @@
                                                 comments and everything in between.
                                             </p>
                                             <h4 class="text-primary ps-4 my-5 ">$69</h4>
-                                            <button class="btn btn-primary btn-custom">SEE MORE</button>
+                                            <button class="btn btn-outline-primary btn-custom">SEE MORE</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
                 </div>
             </div>
         </div>
@@ -1370,34 +1443,37 @@
 </section>
 
 <!--footer-->
-<section class="container-fluid footer py-5">
+<footer class="container-fluid footer py-5">
     <div class="row">
         <div class="col-12">
             <div class="container">
                 <div class="row footer-h">
                     <div class="mb-5 mb-xl-0 col-12 col-md-6 col-lg-6 col-xl-3">
                         <div class="wow animate__fadeIn mb-5 mb-lg-5 mb-xl-3">
-                            <div class="d-flex align-items-end justify-content-center">
-                                <img src="img/logoWhite.svg" class="text-white" style="width: 50px;" alt="">
-                                <h3 class="mb-0 text-white ms-3">
-                                    Marketing
-                                </h3>
-                            </div>
+
                             <div class="">
-                                <h4 class="my-5 text-white text-center">
+                                <h4 class="text-white text-center mb-3">
                                     Stay on Touch
                                 </h4>
+
+                                <div class="mb-5 d-flex align-items-end justify-content-center">
+                                    <img src="img/logoWhite.svg" class="text-white" style="width: 50px;" alt="">
+                                    <h3 class="mb-0 text-white ms-3">
+                                        Marketing
+                                    </h3>
+                                </div>
+
                                 <div class="d-flex align-items-center justify-content-evenly ">
-                                    <a href="https://facebook.com" class="">
+                                    <a href="https://facebook.com" class="home-icon">
                                         <i class="fs-4 fab fa-facebook-f text-white"></i>
                                     </a>
-                                    <a href="https://google.com" class="">
+                                    <a href="https://google.com" class="home-icon">
                                         <i class="fs-4 fab fa-google-plus-g text-white"></i>
                                     </a>
-                                    <a href="https://twitter.com" class="">
+                                    <a href="https://twitter.com" class="home-icon">
                                         <i class="fs-4 fab fa-twitter text-white"></i>
                                     </a>
-                                    <a href="https://instragram.com" class="">
+                                    <a href="https://instragram.com" class="home-icon">
                                         <i class="fs-4 fab fa-instagram text-white"></i>
                                     </a>
                                 </div>
@@ -1481,13 +1557,20 @@
             </div>
         </div>
     </div>
-</section>
+</footer>
+
+<div class="link-to-home">
+    <a href="#home" class="bg-primary d-flex align-items-center justify-content-center link-to-item rounded-circle shadow">
+        <i class="fas fa-chevron-up text-white"></i>
+    </a>
+</div>
 
 <script src="js/jQuery/jQuery.min.js"></script>
 <script src="js/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="vendor/fontawesome/js/all.min.js"></script>
 <script src="vendor/slick/slick.min.js"></script>
 <script src="vendor/wow/dist/wow.min.js"></script>
+<script src="vendor/wayPoint/lib/jquery.waypoints.min.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
